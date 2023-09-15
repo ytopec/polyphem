@@ -1,27 +1,11 @@
-import { JSXElement } from "@babel/types";
+import Style from "./Style"
+import { styleToString } from "./tools/converters"
 
-// export default class Row {
+export default function Row(children: Array<JSX.Element>, styles?: Array<Style>): JSX.Element {
 
-//     children: Array<Widget> = []
+    let out_styles = 'flex ' + styleToString(styles);
 
-//     constructor(children: Array<Widget>) {
-//         this.children = children;
-//     }
-
-//     render() {
-
-//         return (
-//             <div className="flex">
-//                 {this.children.map((item) => {
-//                     return item.render()
-//                 })}
-//             </div>
-//         )
-//     } 
-// }
-
-export default function Row(children: Array<JSX.Element>): JSX.Element {
-    return <div className="flex">
+    return <div className={out_styles}>
         {children.map((item) => {
             return item
         })}

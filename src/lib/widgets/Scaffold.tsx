@@ -1,4 +1,3 @@
-import Widget from "./Widget";
 
 export default function Scaffold(children: Array<JSX.Element>): JSX.Element {
     let out = '';

@@ -7,10 +7,12 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  // safelist: [
-  //   {
-  //     pattern: /?*?/,
-  //   }
-  // ]
+  safelist: [
+    {
+      pattern: /bg-*-*/,
+      pattern: /p-*/,
+      pattern: /m?-*/,
+    }
+  ]
 }
 
